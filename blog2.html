@@ -1,0 +1,152 @@
+<header>
+    <div class="header-banner">
+        <h1>Blog 2</h1>
+    </div>
+    <div class="clear"></div>
+    <nav>
+        <div class="site-title">Blog 2</div>
+     
+    </nav>
+</header>
+     
+<section class="content">
+    <article>
+        <p>Generally speaking, CSS is a website building tool, which allows you to make changes to your website easier and faster. 
+            You don't need to edit every sub-page of the website, you only need to edit 1 file that is referenced on all sub-pages. 
+            CSS also allows the use of more advanced techniques and the creation of unique website designs. CSS or Cascading Style Sheets is a coding language that controls the layout of your website. This can include things such as background color or image, table layouts, font, etc. In the video refrenced it emphasizes that CSS heavily defines the appearance and style of a web page</p>
+        <p>CSS is basically a list of characteristics that you want to apply to every item of a certain type. If you want all paragraphs to be 16-point Helvetica, and to have half-inch margins at top and quarter-inch margins at the sides, you might write something like this:</p>
+        <p class = "code">p { <br>
+
+            font-size: 16pt; <br>
+            font-family: helvetica; <br>
+            background-color: blue; <br>
+            color: black; <br>
+            margin-top: .5in; <br>
+            margin-left: .25in; <br>
+            margin-right: .25in; <br>
+            }</p>
+        <p>You write that CSS information in another text file and you tell your html file to always get style information from the CSS file. You can have multiple different pages that point to one CSS file, so they all get their information from that CSS file. Every HTML file that uses that CSS file will have paragraphs with black text, a blue background, half-inch margins at the top, and quarter-inch margins at the sides.Because multiple HTML files can all use the same CSS file, you save a whole bunch of space. You don't have to specify that information over and over again on each page.</p>
+
+        <iframe width="420" height="315"
+src="https://www.youtube.com/embed/XPv4EeB0PJ8">
+</iframe>
+    </article>
+        
+   
+</section> 
+
+<style>
+
+    .code{
+        background-color: lightgray;
+        border: black;
+
+    }
+
+    /* resets */
+body { margin:0px; padding:0px; }
+
+/* main */
+header {
+    height: 360px;
+    z-index: 10;
+}
+.header-banner {
+    background-color: #333;
+    background-image: url('https://brytdesigns.com/wp-content/uploads/2019/12/html_css_javascript_infographic.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+}
+
+header h1 {
+    background-color: rgba(18,72,120, 0.8);
+    color: #fff;
+    padding: 0 1rem;
+    position: absolute;
+    top: 2rem; 
+    left: 2rem;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background: #292f36;
+    postion: fixed;
+    z-index: 10;
+}
+
+nav div {
+    color: white;
+    font-size: 2rem;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    left: 2%;
+    visibility: hidden;
+}
+.visible-title {
+    visibility: visible;
+}
+
+
+nav ul li a {
+    text-decoration: none; 
+    color: #a9abae;
+}
+
+
+body { 
+    color: #292f36;
+    font-family: helvetica;
+    line-height: 1.6;
+}
+.content{ 
+    margin: 0 auto;
+    padding: 4rem 0;
+    width: 960px;
+    max-width: 100%;
+}
+article {
+    float: left;
+    width: 720px;
+}
+article p:first-of-type {
+    margin-top: 0;
+}
+aside {
+    float: right;
+    width: 120px;
+}
+p img {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 960px) {
+    .content{ 
+        padding: 2rem 0;
+    }
+    article {
+        float: none;
+        margin: 0 auto;
+        width: 96%;
+    }
+    article:last-of-type {  
+        margin-bottom: 3rem;
+    }
+    aside {  
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+}
+</style>
